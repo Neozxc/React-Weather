@@ -4,8 +4,8 @@ import WeatherFetch from './components/WeatherFetch';
 const App = () => {
   return (
     <div>
+      <h3>Simple Weather using React</h3>
       <WeatherFetch />
-      <h3>Hello World</h3>
     </div>
   );
 }
