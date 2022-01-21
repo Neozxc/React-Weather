@@ -4,7 +4,7 @@ import WeatherFetch from './components/WeatherFetch';
 const App = () => {
   return (
     <div>
-      <h3>Simple Weather using React</h3>
+      <h3 className='justATEXT'>Simple Weather using React</h3>
       <WeatherFetch />
     </div>
   );

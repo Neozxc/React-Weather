@@ -49,11 +49,11 @@ const WeatherFetch = () => {
     }, []);
     
   return (
-      <div>
-          <h3>Main Temperature: {mainTemp} Degrees Celsius</h3>
-          <h3>Feels like: {feels_like} Degrees Celsius</h3>
-          <h3>Weather Description: {description}</h3>
-          <h3>Today mainly it is: {main}</h3>
+      <div className='container'>
+          <h3>Main Temperature: <span>{mainTemp}</span> Degrees Celsius</h3>
+          <h3>Feels like: <span>{feels_like}</span> Degrees Celsius</h3>
+          <h3>Weather Description: <span>{description}</span></h3>
+          <h3>Today mainly it is: <span>{main}</span></h3>
       </div>
   )
 }
