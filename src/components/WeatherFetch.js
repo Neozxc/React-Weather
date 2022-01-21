@@ -12,9 +12,13 @@ const WeatherFetch = () => {
 
 
     // useEffect() function which will run when the component is mounted for the first time on the web page.
-    // Will be adding more to it later on...
+    // Display Liverpool, UK into console.log HURAY!
     useEffect(() => {
-
+        fetch('https://api.openweathermap.org/data/2.5/weather?q=Liverpool,UK&APPID=' + key + '&units=metric')
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data);
+        })
     }, []);
     
   return (
