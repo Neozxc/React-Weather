@@ -49,7 +49,7 @@ const WeatherFetch = () => {
           <h3>Feels like: <span>{feels_like}</span> °C</h3>
           <h3>Weather Description: <span>{description}</span></h3>
           <h3>Today mainly it is: <span>{main}</span></h3>
-          <img className='iconColor' src={"http://openweathermap.org/img/wn/" + iconID + "@2x.png"} />
+          <img src={"http://openweathermap.org/img/wn/" + iconID + "@2x.png"} />
           <div className="usersInput">
               <h3>Current City: {inputha ? inputha : "Liverpool"}</h3>
             <form>
