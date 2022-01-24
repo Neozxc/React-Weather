@@ -5,6 +5,7 @@ Other Goals to do:
 1. Display the City we currently on.
 2. Make input for City.
 3. When user types in City, display the Weather.
+4. ~~Add icons.~~
 ------
 
 <p align="center">
