@@ -5,6 +5,10 @@
     font-family: 'Quicksand', sans-serif;
 }
 
+body {
+    background-color: #3c3c3c;
+}
+
 .justATEXT {
     color: white;
     font-size: 25px;
@@ -30,4 +34,14 @@
 
 span {
     color: rgb(84, 232, 243);
+}
+
+img {
+    display: grid;
+    place-items: center;
+    background-color: white;
+    border-radius: 2rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 120px;
 }

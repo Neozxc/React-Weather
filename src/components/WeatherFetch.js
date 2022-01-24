@@ -54,7 +54,7 @@ const WeatherFetch = () => {
           <h3>Feels like: <span>{feels_like}</span> Degrees Celsius</h3>
           <h3>Weather Description: <span>{description}</span></h3>
           <h3>Today mainly it is: <span>{main}</span></h3>
-          <img src={"http://openweathermap.org/img/wn/" + iconID + "@2x.png"} />
+          <img className='iconColor' src={"http://openweathermap.org/img/wn/" + iconID + "@2x.png"} />
 
       </div>
   )
