@@ -5,10 +5,6 @@
     font-family: 'Quicksand', sans-serif;
 }
 
-body {
-    background-color: #3c3c3c;
-}
-
 .justATEXT {
     color: white;
     font-size: 25px;
@@ -39,9 +35,19 @@ span {
 img {
     display: grid;
     place-items: center;
-    background-color: white;
+    background-color: #95d5b2;
     border-radius: 2rem;
     margin-top: 50px;
     margin-bottom: 50px;
     margin-left: 120px;
+}
+
+.usersInput {
+    display: grid;
+    place-items: center;
+}
+
+.add-btn {
+    margin-left: 180px;
+    margin-top: -20px;
 }

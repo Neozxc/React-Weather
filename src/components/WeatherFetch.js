@@ -9,23 +9,18 @@ const WeatherFetch = () => {
     const [description, setDescription] = useState("");
     const [main, setMain] = useState("");
     const [iconID, setIconID] = useState("");
-    const [input, setInput] = useState("");
+    
+    // For users Input
+    const [inputha, setInput] = useState("");
 
-
-    // Stretch Goal:
-    // Users input
-    // Show the city and the data from what city user typed in
-
-
-    // const onChange = x => {
-    //     setInput(x.target.value);
-    // };
-
+    const handleChange = (e) => {
+        setInput(e.target.value);
+    };
 
     // useEffect() function which will run when the component is mounted for the first time on the web page.
     // Display Liverpool, UK into console.log HURAY!
     useEffect(() => {
-        fetch('https://api.openweathermap.org/data/2.5/weather?q=Liverpool,UK&APPID=' + key + '&units=metric')
+        fetch('https://api.openweathermap.org/data/2.5/weather?q=Liverpool&APPID=' + key + '&units=metric')
         .then((res) => res.json())
         .then((data) => {
             // Assigning values to hooks
@@ -50,12 +45,18 @@ const WeatherFetch = () => {
     
   return (
       <div className='container'>
-          <h3>Main Temperature: <span>{mainTemp}</span> Degrees Celsius</h3>
-          <h3>Feels like: <span>{feels_like}</span> Degrees Celsius</h3>
+          <h3>Main Temperature: <span>{mainTemp}</span> °C</h3>
+          <h3>Feels like: <span>{feels_like}</span> °C</h3>
           <h3>Weather Description: <span>{description}</span></h3>
           <h3>Today mainly it is: <span>{main}</span></h3>
           <img className='iconColor' src={"http://openweathermap.org/img/wn/" + iconID + "@2x.png"} />
-
+          <div className="usersInput">
+              <h3>Current City: {inputha ? inputha : "Liverpool"}</h3>
+            <form>
+                <input type="text" name="name" onChange={handleChange}/>
+                <input type="submit" value="Check" onClick={(e) => e.preventDefault() }/>
+            </form>
+          </div>
       </div>
   )
 }
