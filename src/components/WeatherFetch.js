@@ -8,7 +8,7 @@ const WeatherFetch = () => {
     const [mainTemp, setMainTemp] = useState("");
     const [description, setDescription] = useState("");
     const [main, setMain] = useState("");
-    // const [iconID, setIconID] = useState("");
+    const [iconID, setIconID] = useState("");
     const [input, setInput] = useState("");
 
 
@@ -41,7 +41,7 @@ const WeatherFetch = () => {
             setMainTemp(data.main.temp);
             setDescription(data.weather[0].description);
             setMain(data.weather[0].main);
-            // setIconID(data.weather[0].iconID)
+            setIconID(data.weather[0].icon)
             console.log(data);
 
             // We now have extracted the needed values from the data variable. All that’s left is to display it.
@@ -54,6 +54,8 @@ const WeatherFetch = () => {
           <h3>Feels like: <span>{feels_like}</span> Degrees Celsius</h3>
           <h3>Weather Description: <span>{description}</span></h3>
           <h3>Today mainly it is: <span>{main}</span></h3>
+          <img src={"http://openweathermap.org/img/wn/" + iconID + "@2x.png"} />
+
       </div>
   )
 }
